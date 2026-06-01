@@ -1,189 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Forte - Futuro Sustentável</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        🌱 Agro Forte
-    </div>
-
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#impacto">Impacto</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#contato">Contato</a>
+        <h1>🌱 Agro Forte</h1>
+
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
     </nav>
 
-    <button id="temaBtn">🌙</button>
+    <div class="hero">
 
-</header>
-
-<section id="inicio" class="hero">
-
-    <div class="hero-content">
-
-        <h1>Agro Forte, Futuro Sustentável</h1>
+        <h2>Agro Forte, Futuro Sustentável</h2>
 
         <p>
-            Equilíbrio entre produção agrícola,
-            tecnologia e preservação ambiental.
+            Equilíbrio entre produção agrícola e preservação ambiental.
         </p>
 
-        <button id="saibaMais">
-            Saiba Mais
+        <button id="btnMensagem">
+            Descobrir Mais
         </button>
 
     </div>
 
-</section>
+</header>
 
 <section id="sobre">
 
-    <h2>🌾 Agricultura Inteligente</h2>
+    <h2>🌿 Agricultura Sustentável</h2>
 
-    <p class="texto-central">
-        O agronegócio sustentável utiliza inovação,
-        energia limpa e preservação dos recursos naturais
-        para garantir alimentos para o presente e para o futuro.
+    <img
+    src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854"
+    alt="Plantação">
+
+    <p>
+        A agricultura sustentável busca produzir alimentos de qualidade,
+        preservando o solo, a água e a biodiversidade para as futuras gerações.
     </p>
+
+</section>
+
+<section id="beneficios">
+
+    <h2>🌎 Benefícios</h2>
 
     <div class="cards">
 
         <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600"
-                alt="Plantação">
-
-            <h3>💧 Economia de Água</h3>
-
-            <p>
-                Sistemas modernos reduzem o desperdício e aumentam a eficiência.
-            </p>
-
+            <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png">
+            <h3>Meio Ambiente</h3>
+            <p>Redução dos impactos ambientais.</p>
         </div>
 
         <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600"
-                alt="Energia Solar">
-
-            <h3>🌞 Energia Renovável</h3>
-
-            <p>
-                Fazendas cada vez mais sustentáveis utilizam energia solar.
-            </p>
-
+            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909768.png">
+            <h3>Produção</h3>
+            <p>Maior produtividade agrícola.</p>
         </div>
 
         <div class="card">
-
-            <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=600"
-                alt="Reciclagem">
-
-            <h3>♻️ Reciclagem</h3>
-
-            <p>
-                Transformação de resíduos agrícolas em novos recursos.
-            </p>
-
+            <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png">
+            <h3>Recursos Naturais</h3>
+            <p>Uso consciente da água e do solo.</p>
         </div>
 
     </div>
 
 </section>
 
-<section id="impacto">
+<section class="contador">
 
-    <h2>📊 Nosso Impacto</h2>
+    <h2>🌳 Árvores Preservadas</h2>
 
-    <div class="numeros">
-
-        <div class="numero-box">
-            <h3 id="num1">0</h3>
-            <p>Hectares Preservados</p>
-        </div>
-
-        <div class="numero-box">
-            <h3 id="num2">0</h3>
-            <p>Toneladas Recicladas</p>
-        </div>
-
-        <div class="numero-box">
-            <h3 id="num3">0</h3>
-            <p>Produtores Beneficiados</p>
-        </div>
-
-    </div>
+    <div id="contadorNumero">0</div>
 
 </section>
 
-<section id="galeria">
+<section id="quiz">
 
-    <h2>📸 Galeria Sustentável</h2>
+    <h2>🧠 Quiz Sustentável</h2>
 
-    <div class="galeria">
+    <p>Qual prática ajuda a preservar o solo?</p>
 
-        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800">
+    <button onclick="respostaCorreta()">
+        Rotação de Culturas
+    </button>
 
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800">
+    <button onclick="respostaErrada()">
+        Desmatamento
+    </button>
 
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800">
-
-        <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800">
-
-    </div>
+    <p id="resultado"></p>
 
 </section>
 
 <section id="contato">
 
-    <h2>📩 Entre em Contato</h2>
+    <h2>📧 Entre em Contato</h2>
 
     <form id="formulario">
 
         <input
-            type="text"
-            id="nome"
-            placeholder="Digite seu nome">
+        type="text"
+        id="nome"
+        placeholder="Seu nome">
 
         <input
-            type="email"
-            id="email"
-            placeholder="Digite seu email">
-
-        <textarea
-            id="mensagem"
-            placeholder="Digite sua mensagem"></textarea>
+        type="email"
+        id="email"
+        placeholder="Seu e-mail">
 
         <button type="submit">
-            Enviar Mensagem
+            Enviar
         </button>
 
-        <p id="feedback"></p>
-
     </form>
+
+    <p id="mensagemFormulario"></p>
 
 </section>
 
 <footer>
-
-    <p>
-        🌱 Agro Forte • Futuro Sustentável • 2026
-    </p>
-
+    <p>🌱 Agro Forte © 2026</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
