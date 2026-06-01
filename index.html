@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Produção agrícola com consciência ambiental</h2>
+        <p>Equilibrando a produtividade do campo com a preservação do planeta.</p>
+        <button id="learnMoreBtn">Saiba Mais</button>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Nosso objetivo é promover práticas agrícolas sustentáveis que respeitem o meio ambiente, garantindo um futuro mais saudável e produtivo para todos.</p>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos Sustentáveis</h2>
+        <div class="project-cards">
+            <div class="card">
+                <h3>Plantio Inteligente</h3>
+                <p>Uso de tecnologia para otimizar recursos e aumentar a produtividade sem prejudicar o solo.</p>
+            </div>
+            <div class="card">
+                <h3>Energia Renovável</h3>
+                <p>Incorporação de energia solar e eólica nas fazendas para reduzir a emissão de carbono.</p>
+            </div>
+            <div class="card">
+                <h3>Reciclagem de Resíduos</h3>
+                <p>Transformamos resíduos agrícolas em adubo e biogás, fechando o ciclo da produção sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="formMessage" class="hidden"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agro Forte. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
