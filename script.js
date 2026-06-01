@@ -1,96 +1,78 @@
-const temaBtn = document.getElementById("temaBtn");
-
-temaBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    temaBtn.textContent =
-    document.body.classList.contains("dark")
-    ? "☀️"
-    : "🌙";
-});
+// Mensagem principal
 
 document
-.getElementById("saibaMais")
+.getElementById("btnMensagem")
 .addEventListener("click", () => {
 
-document
-.getElementById("sobre")
-.scrollIntoView({
-behavior:"smooth"
-});
+    alert(
+        "A sustentabilidade garante um futuro melhor para todos!"
+    );
 
 });
 
-function animarNumero(id, valor){
+// Contador animado
 
 let numero = 0;
 
-const elemento =
-document.getElementById(id);
+const contador =
+document.getElementById("contadorNumero");
 
-const incremento = valor / 100;
+const intervalo = setInterval(() => {
 
-const timer = setInterval(() => {
+    numero += 10;
 
-numero += incremento;
+    contador.textContent = numero;
 
-if(numero >= valor){
+    if(numero >= 1000){
+        clearInterval(intervalo);
+    }
 
-numero = valor;
+}, 20);
 
-clearInterval(timer);
+// Quiz
+
+function respostaCorreta(){
+
+    document.getElementById("resultado")
+    .innerHTML =
+    "✅ Correto! A rotação de culturas preserva o solo.";
 
 }
 
-elemento.textContent =
-Math.floor(numero).toLocaleString();
+function respostaErrada(){
 
-},20);
+    document.getElementById("resultado")
+    .innerHTML =
+    "❌ Errado! O desmatamento prejudica o meio ambiente.";
 
 }
 
-window.addEventListener("load", () => {
+// Formulário
 
-animarNumero("num1", 5000);
-animarNumero("num2", 1200);
-animarNumero("num3", 350);
+document
+.getElementById("formulario")
+.addEventListener("submit", (e)=>{
 
-});
+    e.preventDefault();
 
-const formulario =
-document.getElementById("formulario");
+    const nome =
+    document.getElementById("nome").value;
 
-const feedback =
-document.getElementById("feedback");
+    const email =
+    document.getElementById("email").value;
 
-formulario.addEventListener("submit", (e) => {
+    if(nome === "" || email === ""){
 
-e.preventDefault();
+        document.getElementById(
+            "mensagemFormulario"
+        ).innerHTML =
+        "⚠️ Preencha todos os campos.";
 
-const nome =
-document.getElementById("nome").value.trim();
+        return;
+    }
 
-const email =
-document.getElementById("email").value.trim();
-
-const mensagem =
-document.getElementById("mensagem").value.trim();
-
-if(nome === "" || email === "" || mensagem === ""){
-
-feedback.textContent =
-"Preencha todos os campos.";
-
-feedback.style.color = "red";
-
-return;
-}
-
-feedback.textContent =
-`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
-
-feedback.style.color = "green";
-
-formulario.reset();
-
+    document.getElementById(
+        "mensagemFormulario"
+    ).innerHTML =
+    "✅ Mensagem enviada com sucesso!";
 });
